@@ -1,0 +1,18 @@
+concurrent = 4
+check_interval = 0
+
+[session_server]
+  listen_address = "[::]:8093"
+  advertise_address = "192.168.1.66:8093"
+  session_timeout = 1800
+
+[[runners]]
+  name = "runner-sharing"
+  url = "http://192.168.1.66/"
+  token = "4tHAkqBURvhaz8S3wWyi"
+  executor = "shell"
+  [runners.custom_build_dir]
+  [runners.cache]
+    [runners.cache.s3]
+    [runners.cache.gcs]
+    [runners.cache.azure]
